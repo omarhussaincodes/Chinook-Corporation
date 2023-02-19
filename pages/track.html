@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
+    <script defer src="../js/track.js"></script>
+    <script defer src="../modal.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $("#header").load("../shared/header.html");
+        });
+        $(function () {
+            $("#tabs").load("../shared/tab.html");
+        });
+        $(function () {
+            $("#footer").load("../shared/footer.html");
+        });
+    </script>
+    <title>Chinook Coporation</title>
+</head>
+
+<body>
+
+    <div id="header">
+    </div>
+
+    <div hidden class="notification">
+        <button class="delete"></button>
+    </div>
+
+    <div id="tabs">
+    </div>
+
+    <!-- Trigger Button -->
+    <button hidden id="modal-trigger-btn" class="js-modal-trigger" data-target="modal-js">
+    </button>
+
+    <!-- Edit Modal -->
+    <div id="modal-js" class="modal">
+        <div class="modal-background"></div>
+
+        <div class="modal-content">
+            <div class="box">
+                <p class="title is-4 is-spaced">Edit Track :</p>
+                <!-- Form  -->
+                <form method="post" id="edit-form">
+                    <div class="field">
+                        <!-- Track Name -->
+                        <div class="field">
+                            <div class="control">
+                                <label for="trackName">Track :</label>
+                                <input id="input-trackName" name="trackName" class="input" type="text">
+                            </div>
+                            <div id="trackName-target">
+                            </div>
+                        </div>
+
+                        <!-- Composer -->
+                        <div class="field">
+                            <div class="control">
+                                <label for="composer">Composer :</label>
+                                <input id="input-composer" name="composer" class="input" type="text">
+                            </div>
+                            <div id="composer-target">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unit Price -->
+                    <div class="field">
+                        <div class="control">
+                            <label for="unitPrice">Unit Price: :</label>
+                            <input id="input-unitPrice" name="unitPrice" class="input" type="number" min="0" max="99999"
+                                step="0.01">
+                        </div>
+                        <div id="unitPrice-target">
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="field">
+                        <div class="control" id="btn-container">
+                            <button class="button is-dark" id="btn-edit-form">
+                                Edit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Table -->
+    <section class="section" style="padding: 0rem 1.5rem;">
+        <div class="target">
+            <table class="table is-striped is-hoverable is-fullwidth">
+                <thead>
+                    <tr>
+                        <th title="TrackName">Track</th>
+                        <th title="Composer">Composer</th>
+                        <th title="TrackLength">Track Length(ms)</th>
+                        <th title="Bytes">Bytes</th>
+                        <th title="UnitPrice">Unit Price</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+
+<!-- footer -->
+<div id="footer">
+</div>
+
+</html>

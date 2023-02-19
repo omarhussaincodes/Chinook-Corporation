@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
+    <script defer src="../js/employee.js"></script>
+    <script defer src="../modal.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $("#header").load("../shared/header.html");
+        });
+        $(function () {
+            $("#tabs").load("../shared/tab.html");
+        });
+        $(function () {
+            $("#footer").load("../shared/footer.html");
+        });
+    </script>
+    <title>Chinook Coporation</title>
+</head>
+
+<body>
+
+    <div class="page-container">
+
+        <div id="header">
+        </div>
+
+        <div id="tabs">
+        </div>
+
+        <!-- Add button -->
+        <div>
+            <button class="js-modal-trigger button is-dark" data-target="modal-js" id="btn-add">
+                <i class="fas fa-plus-circle"> Add Employee</i>
+            </button>
+        </div>
+
+        <!-- ADD Modal -->
+        <div id="modal-js" class="modal">
+            <div class="modal-background"></div>
+
+            <div class="modal-content">
+                <div class="box">
+                    <p class="title is-4 is-spaced">Add Employee :</p>
+                    <!-- Form  -->
+                    <form method="post" id="employee-form">
+                        <div class="field">
+                            <!-- FirstName -->
+                            <div class="field">
+                                <div class="control has-icons-left">
+                                    <input id="input-firstName" name="firstName" class="input" type="text"
+                                        placeholder="FirstName">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                </div>
+                                <div id="firstName-target">
+                                </div>
+                            </div>
+
+                            <!-- LastName -->
+                            <div class="field">
+                                <div class="control has-icons-left">
+                                    <input id="input-lastName" name="lastName" class="input" type="text"
+                                        placeholder="LastName">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                </div>
+                                <div id="lastName-target">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Title dropdown -->
+                        <div class="field">
+                            <div class="control">
+                                <div class="select">
+                                    <select name="title" class="dropdown-target">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="field">
+                            <div class="control has-icons-left has-icons-right">
+                                <input id="input-email" name="email" class="input" type="email" placeholder="Email">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </span>
+                            </div>
+                            <div id="email-target">
+                            </div>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="field">
+                            <div class="control" id="btn-container">
+                                <button disabled class="button is-dark" id="btn-form">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Table -->
+    <section class="section" style="padding: 0rem 1.5rem;">
+        <div class="target">
+            <table class="table is-striped is-hoverable is-fullwidth">
+                <thead>
+                    <tr>
+                        <th title="#">#</th>
+                        <th title="FullName">Employee Name</th>
+                        <th title="Email">Email</th>
+                        <th title="Title">Title</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                </tbody>
+            </table>
+        </div>
+    </section>
+    </div>
+</body>
+
+<!-- footer -->
+<div id="footer">
+</div>
+
+</html>

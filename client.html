@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $("#header").load("./shared/header.html");
+        });
+        $(function () {
+            $("#footer").load("./shared/footer.html");
+        });
+    </script>
+    <title>Chinook Coporation</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+</head>
+
+<body>
+
+    <div id="header">
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs is-centered">
+        <ul>
+            <li>
+                <a href="./pages/employee.html">
+                    <span class="icon is-small"><i class="fas fa-user"></i></span>
+                    <span>Employees</span>
+                </a>
+            </li>
+            <li>
+                <a href="./pages/customer.html">
+                    <span class="icon is-small"><i class="fas fa-users"></i></span>
+                    <span>Customers</span>
+                </a>
+            </li>
+            <li>
+                <a href="./pages/track.html">
+                    <span class="icon is-small"><i class="fas fa-music"></i></span>
+                    <span>Tracks</span>
+                </a>
+            </li>
+            <li>
+                <a href="./pages/album.html">
+                    <span class="icon is-small"><i class="fas fa-record-vinyl"></i></span>
+                    <span>Albums</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <div class="content-header">
+                    <h1 class="title is-1">
+                        Chinook Corporation
+                    </h1>
+                    <h5 class="title is-5">A Music Store Company</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<!-- footer -->
+<div id="footer" style="    position: absolute;
+bottom: 0;
+width: 100%;">
+</div>
+
+</html>

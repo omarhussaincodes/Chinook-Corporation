@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
+    <script defer src="../js/customer.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $("#header").load("../shared/header.html");
+        });
+        $(function () {
+            $("#tabs").load("../shared/tab.html");
+        });
+        $(function () {
+            $("#footer").load("../shared/footer.html");
+        });
+    </script>
+    <title>Chinook Coporation</title>
+</head>
+
+<body>
+
+    <div id="header">
+    </div>
+
+    <div id="tabs">
+    </div>
+
+    <!-- Search by Country Dropdown -->
+    <div class="dropdown" id="dropdown-container">
+        <div class="select">
+            <select name="country" class="dropdown-target" id="country-dropdown">
+                <option value="0">Search Customers by Country</option>
+            </select>
+        </div>
+      </div>
+
+    <!-- Table -->
+    <section class="section" style="padding: 0rem 1.5rem;">
+        <div class="target">
+            <table class="table is-striped is-hoverable is-fullwidth">
+                <thead>
+                    <tr>
+                        <th title="FullName">Customer Name</th>
+                        <th title="Address">Address</th>
+                        <th title="City">City</th>
+                        <th title="Country">Country</th>
+                        <th title="PostalCode">PostalCode</th>
+                        <th title="Phone">Phone</th>
+                        <th title="Email">Email</th>
+                        <th title="customerRep">Customer Representative</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+
+<!-- footer -->
+<div id="footer">
+</div>
+
+</html>
